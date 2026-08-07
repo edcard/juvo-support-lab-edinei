@@ -71,6 +71,7 @@ N/A - caso resolvido via consulta de dados; alinhar motivo com equipe de Crédit
 @agente.cx07 A CCB 90008001 foi recusada pela equipe de crédito (RECUSA_CREDITO) e consta como cancelada. Não cabe reprocessamento de Pix. 
 
 9. Status final
+    
 Cancelado/resolvido
 
 ========================================================================================
@@ -113,4 +114,4 @@ validar o recebimento.
 
 SOLUCIONADO
 
- validar o recebimento.
+========================================================================================
