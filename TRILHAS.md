@@ -397,6 +397,46 @@ N/A
 
 AGUARDANDO INFORMAÇÃO / EM ANDAMENTO
 
+===========================================================
+
+IT-2006	Parar SMS / comunicação - 902.666.666-06
+
+1. Onde consulto primeiro
+
+Sistema interno → CPF 902.666.666-06 → aba cadastro de lead, preferências de comunicação e solicitações LGPD.
+
+2. O que busco
+
+Status do lead, solicitação exclusão definitiva LGPD
+
+3. O que encontrei
+
+CSV: credit_status=reprovado_alpha9, onboarding_step=completed, bank_validated=nao, lead_status=lead_ativo, lgpd_delete_requested=nao.
+
+4. Hipótese
+
+O cliente foi reprovado no crédito, mas continuou recebendo mensagens porque seu cadastro permanece marcado como lead ativo.Não há pedido de exclusão total de dados via LGPD (lgpd_delete_requested=nao), apenas revogação do consentimento para envio de SMS de ofertas
+
+5. Retry/reprocesso
+
+N/A - Não se trata de uma falha no sistema.
+
+6. Correção manual
+
+Ajustar as preferências de comunicação, desmarcando o envio de SMS.
+ 
+7. Escalação
+
+N/A - O ajuste de preferência de comunicação é uma ação direta d suporte.
+
+8. Comunicação
+
+@agente.cx05 Realizamos a atualização das preferências de comunicação no cadastro do cliente. Como não houve solicitação de exclusão de dados (LGPD), histórico permanece gravado.
+
+9. Status final
+
+SOLUCIONADO
+
 
 
 
