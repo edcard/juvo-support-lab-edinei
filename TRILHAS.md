@@ -357,5 +357,46 @@ N/A - tratativa de alinhamento de regra de negócio direta com o agente de CX.
 
 SOLUCIONADO
 
+============================================
+
+IT-2007	- Termo de quitação - 902.777.777-07
+
+1. Onde consulto primeiro
+
+Sistema interno → contrato 90007001 / CPF 902.777.777-07 → aba cadastro do cliente e logs de envio de documentos (term_email_status).
+
+2. O que busco
+
+Status do contrato, status do envio do e-mail, confirmação da falha de entrega.
+
+3. O que encontrei
+
+CSV: contract_status=quitado, bank_validated=sim, term_email_status=bounce.
+
+4. Hipótese
+
+O contrato está devidamente quitado, mas o envio do Termo de Quitação falhou porque o e-mail cadastrado no sistema é inválido ou recusou o recebimento (bounce).
+
+5. Retry/reprocesso
+
+Disparar o reenvio automático do Termo de Quitação via sistema após a atualização do endereço de e-mail.
+
+6. Correção manual
+
+Atualizar o e-mail do cliente no cadastro do sistema interno com o novo endereço correto fornecido pelo cliente/CX.
+ 
+7. Escalação
+
+N/A
+
+8. Comunicação
+
+@agente.cx06 Confirmei no sistema que o e-mail anterior retornou falha de entrega (bounce). Por favor, nos envie o novo e-mail correto do cliente para efetuarmos a atualização no cadastro e realizar o reenvio imediato do Termo de Quitação da CCB 90007001.
+
+9. Status final
+
+AGUARDANDO INFORMAÇÃO / EM ANDAMENTO
+
+
 
 
