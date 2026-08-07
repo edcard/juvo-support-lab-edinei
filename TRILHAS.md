@@ -109,6 +109,9 @@ N/A - ação operacional realizada diretamente pelo suporte.
 
 @agente.cx07 Não é o mesmo caso da outra CCB. A CCB 90008002 foi aprovada e o Pix foi reprocessado com sucesso nesta manhã. Pedir para o cliente 
 validar o recebimento.
+====================================================================================
+
+
 
 9. Status final
 
