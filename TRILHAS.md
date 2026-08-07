@@ -106,12 +106,8 @@ N/A - reprocessamento via sistema resolve a pendência.
 N/A - ação operacional realizada diretamente pelo suporte.
 
 8. Comunicação
-
-@agente.cx07 Não é o mesmo caso da outra CCB. A CCB 90008002 foi aprovada e o Pix foi reprocessado com sucesso nesta manhã. Pedir para o cliente 
-validar o recebimento.
-====================================================================================
-
-
+@agente.cx07 Não é o mesmo caso da outra CCB. A CCB 90008002 foi aprovada e o Pix foi reprocessado com sucesso. 
+Pedir para cliente validar o recebimento.
 
 9. Status final
 
