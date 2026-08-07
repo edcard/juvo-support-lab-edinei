@@ -1,92 +1,116 @@
-# trilhas
-# IT-2001 - Desembolso ao cliente
+Ticket IT-2001 (Desembolso ao cliente - Antifraude)
+1. Onde consulto primeiro
 
-## Resumo
+Sistema interno → contrato 90001001 / CPF → aba pagamentos e segurança.
 
-Cliente informa que assinou o contrato no dia anterior e ainda não recebeu o PIX.
+2. O que busco
 
-## Análise
+Status do contrato, Status do desembolso?, e se existe algum bloqueio de segurança ou pendência na proposta.
 
-Ao consultar o sistema interno pelo CPF, foi identificado:
+3. O que encontrei
 
-- Contrato: Assinado
-- CCB: 90001001
-- Crédito: Aprovado
-- Banco validado: Sim
-- Status do desembolso: Aguardando desembolso
-- Motivo do bloqueio: ANTIFRAUD_HOLD
+CSV: contrato_status=assinado, credito_status=aprovado, banco_validado=sim, desembolso_status=aguardando_desembolso, bloqueio_motivo=ANTIFRAUD_HOLD.
 
-## Ação
+4. Hipótese
 
-Escalar para o time de Antifraude devido ao bloqueio ANTIFRAUD_HOLD.
+Contrato e crédito estão aprovados, mas o Pix não foi enviado porque o sistema ativou uma trava preventiva do módulo de Antifraude (ANTIFRAUD_HOLD).
 
-## Resposta ao CX
+5. Retry/reprocesso
 
-Foi identificado que o contrato está aprovado e a conta bancária validada. O desembolso encontra-se retido por uma validação de Antifraude (ANTIFRAUD_HOLD). O caso foi encaminhado para a equipe responsável para análise e liberação do pagamento.
+N/A - não cabe reprocessar enquanto houver trava de segurança ativa.
+
+6. Correção manual
+
+N/A - a liberação depende de análise da equipe especializada.
+
+7. Escalação
+
+Escalar ticket para o time de Antifraude/Risco solicitando a análise e liberação do bloqueio ANTIFRAUD_HOLD.
+
+8. Comunicação
+
+@agente.cx Contrato aprovado e banco validado. O desembolso está retido por uma trava preventiva de Antifraude (ANTIFRAUD_HOLD). Encaminhado ao time responsável para análise e liberação.
+
+9. Status final
+
+EM ANDAMENTO / ESCALADO
 
 ============================================================================================
 
-# IT-2008 - Desembolso ao cliente
+Ticket IT-2008 (Desembolso ao cliente - CCB 90008001)
+1. Onde consulto primeiro
 
-## Resumo
+Sistema interno → contrato 90008001 / CPF 902.888.888-08 → aba proposta/crédito.
 
-Cliente informa que assinou o contrato no dia anterior e ainda não recebeu o PIX.
+2. O que busco
 
-## Análise
+Status da CCB 90008001, Status do crédito?, e se Eexiste valor aprovado pendente de envio.
 
-Ao consultar o sistema interno pelo CPF, foi verificado que:
+3. O que encontrei
 
-- Contrato: recusado
-- CCB: 90008001
-- Crédito: Aprovado
-- Banco validado: Sim
-- Status do desembolso: cancelado
-- Motivo recusa: RECUSA_CREDITO
+CSV: contrato_status=recusado, credito_status=recusado, banco_validado=sim, desembolso_status=cancelado, recusa_motivo=RECUSA_CREDITO.
 
-## Troubleshooting
+4. Hipótese
 
-1. Localizar o cliente pelo CPF.
-2. Confirmar a CCB informada.
-3. Validar o status do contrato.
-4. Consultar o status do desembolso.
-6. Identificar o motivo da recusa do contrato.
-7. Encaminhar para a equipe de crédito verificar.
-8. Registrar todas as evidências no Jira.
+Solicitação de reprocessamento é indevida; a proposta foi recusada (RECUSA_CREDITO) e o desembolso foi cancelado.
 
-## Ação
+5. Retry/reprocesso
 
-Encaminhar para a equipe de contratos/créditos verificar o que ocorreu.
+N/A - não cabe reprocessamento de Pix para propostas recusadas.
 
-## Resposta ao CX
+6. Correção manual
 
-Foi identificado que o contrato e o crédito foram recusados, enviado para a equipe  responsável para análise e liberação ou não do PIX.
+N/A - não há valor a ser liberado.
 
+7. Escalação
+
+N/A - caso resolvido via consulta de dados; alinhar motivo com equipe de Crédito/Contratos se necessário.
+
+8. Comunicação
+
+@agente.cx07 A CCB 90008001 foi recusada pela equipe de crédito (RECUSA_CREDITO) e consta como cancelada. Não cabe reprocessamento de Pix. 
+
+9. Status final
+
+CANCELADO / RESOLVIDO
 ========================================================================================
 
-# IT-2011 - Desembolso ao cliente 902.888.888-08
+Ticket IT-2011 (Desembolso ao cliente - CCB 90008002)
+1. Onde consulto primeiro
 
-## Resumo
+Sistema interno → contrato 90008002 / CPF 902.888.888-08 → aba pagamentos e integração Pix.
 
-Desembolso ao cliente
+2. O que busco
 
-## Análise
+Status da CCB 90008002. Se o status é diferente da CCB anterior e o status da transação Pix.
 
-Ao consultar o sistema interno pelo CPF e CCB, foi verificado que:
+3. O que encontrei
 
-- Contrato: assinado
-- CCB: 90008002
-- Crédito: Aprovado
-- Banco validado: Sim
-- Status do desembolso: aguardando desembolso
+CSV: contrato_status=assinado, credito_status=aprovado, banco_validado=sim, desembolso_status=aguardando_desembolso.
 
-## Causa
- Falha na integração/envio de Pix nessa nova proposta.
+4. Hipótese
 
-## Ação
+Não é o mesmo problema do IT-2008. A CCB 90008002 está aprovada e sofreu apenas uma falha temporária na integração de envio do Pix.
 
-Executar rotina de reprocessamento (Pagamento/Pix) para esse CCB 90008002
+5. Retry/reprocesso
 
-## Resposta ao CX
+Executar rotina de reprocessamento (retry) do pagamento/Pix para a CCB 90008002.
 
-Não se trata do mesmo problema da CCB anterior. A CCB 90008001 (ticket IT-2008) foi recusada, porém a CCB 90008002 foi aprovado e estava pendente apenas do reprocessamento do Pix. 
-Feito o reprocessamento do Pix, pedir para cliente validar o recebimento.
+6. Correção manual
+
+N/A - reprocessamento via sistema resolve a pendência.
+
+7. Escalação
+
+N/A - ação operacional realizada diretamente pelo suporte.
+
+8. Comunicação
+
+@agente.cx07 Não é o mesmo caso da outra CCB. A CCB 90008002 foi aprovada e o Pix foi reprocessado com sucesso nesta manhã. Pedir para o cliente 
+validar o recebimento.
+
+9. Status final
+
+SOLUCIONADO
+
+ validar o recebimento.
