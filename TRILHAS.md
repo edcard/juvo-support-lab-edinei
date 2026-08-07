@@ -153,6 +153,7 @@ Financeiro para estorno na conta do cliente. A parcela consta como quitada e as 
 9. Status final
     
 SOLUCIONADO
+
 =========================================================================================
 IT-2009 - Valor divergente de pagamento
 
@@ -184,7 +185,7 @@ Solicitar ao time Financeiro/Tesouraria a devolução do valor pago a maior.
  
 7. Escalação
    
-Escalar para o time Financeiro/Tesouraria paraa devolução do valor excedente (R$ 46,94).
+Escalar para o time Financeiro/Tesouraria para devolução do valor excedente (R$ 46,94).
 
 8. Comunicação
    
@@ -193,5 +194,45 @@ Escalar para o time Financeiro/Tesouraria paraa devolução do valor excedente (
 9. Status final
     
 SOLUCIONADO
+
+==========================================================================================
+
+IT-2010	Cliente alega quitação
+
+1. Onde consulto primeiro
+
+Sistema interno → contrato 90010001/CPF 902.101.010-10 -aba staus das parcelas, numero_ parcela , valor, status pagamento.
+
+2. O que busco
+
+Status da Parcela 7, se existe registro de pagamento ou tentativa de transação no sistema para esse valor, e o tempo de atraso.
+
+3. O que encontrei
+
+contract_status=ativo, installment_ref=parcela_7, installment_status=aberta, installment_amount_brl=390.00, days_past_due=45, sem registro de payment_id, payment_status ou payment_received_at.
+
+4. Hipótese
+
+Sem registro de entrada desse valor no sistema e o cliente não apresentou comprovante de pagamento/quitação.
+
+5. Retry/reprocesso
+
+N/A - Não identificada transação pendente de pagamento.
+
+6. Correção manual
+
+N/A - Sem o comprovante de pagamento, não tem como fazer a baixa manual.
+ 
+7. Escalação
+
+Tratativa com o agente de CX.
+
+8. Comunicação
+
+@agente.cx09 A parcela 7 (R$ 390,00) consta aberta no sistema com 45 dias de atraso e não identificamos nenhum recebimento no extrato bancário. Solicite ao cliente o envio do comprovante de pagamento Pix/boleto com a chave/autenticação bancária para que possamos localizar o valor ou efetuar a baixa. Por ora, a cobrança segue mantida.
+
+9. Status final
+
+AGUARDANDO INFORMAÇÃO
 
 
