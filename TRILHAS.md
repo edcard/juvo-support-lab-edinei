@@ -236,4 +236,44 @@ Tratativa com o agente de CX.
 
 AGUARDANDO INFORMAÇÃO
 
+====================================================================================================
+
+IT-2002 - Onboarding site - 902.222.222-02
+
+1. Onde consulto primeiro
+
+Sistema interno → CPF 902.101.010-10 - etapa do onboarding
+
+2. O que busco
+
+A etapa em que onboarding está parado, qual o erro ao fazer o onboarding.
+
+3. O que encontrei
+
+onboarding_step = document_upload , onboarding_error = KYC_DOC_EXPIRED, credit_status = aprovado_alpha9 e sem CCB gerado.
+
+4. Hipótese
+
+O envio dos documentos/selfie está sendo recusado , porque o mesmo está vencido/expirado  (KYC_DOC_EXPIRED), e não por uma falha técnica do aplicativo.
+
+5. Retry/reprocesso
+
+N/A - A validação funcionou corretamente ao rejeitar o documento vencido.
+
+6. Correção manual
+
+Resetar a etapa do envio do documento, para o cliente, tentar novamente.
+ 
+7. Escalação
+
+N/A
+
+8. Comunicação
+
+@agente.cx02 O erro de envio não é uma falha no aplicativo. Identificamos no sistema que o documento enviado pelo cliente foi recusado por estar vencido/expirado (KYC_DOC_EXPIRED). Resetei a etapa de envio de documentos. Por favor, oriente o cliente a realizar o envio de um documento de identidade válido e atualizado.
+
+9. Status final
+
+SOLUCIONADO
+
 
