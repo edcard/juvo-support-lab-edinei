@@ -316,4 +316,46 @@ N/A - regenerar boleto é ação operacional do suporte.
 
 SOLUCIONADO
 
+============================================================
+
+IT-2005	- Erro ao gerar negociação (Juvo Negocia)
+
+1. Onde consulto primeiro
+
+Sistema interno → CPF 902.555.555-05 , CCB 90005001, parcela, status da proposta, valor, se a renegociação é elegível, dias de atraso
+
+2. O que busco
+
+Se a renegociação é elegível, quantos dias de atraso, parcela e status da proposta.
+
+3. O que encontrei
+
+installment_ref =proposta_reneg, installment_status=aberta, installment_amount_brl =1890.00, renegotiation_eligible=sim, days_past_due=95
+
+4. Hipótese
+
+O sistema calculou e registrou formalmente a proposta com o desconto no valor de (R$ 1.890,00). O valor de R$ 2.450,00 informado pelo CX foi um alinhamento verbal que acredito estar incorreto.
+
+5. Retry/reprocesso
+
+N/A - Não há erro de processamento no sistema.
+O valor de 1.890,00 foi gerado corretamente.
+
+6. Correção manual
+
+N/A
+
+7. Escalação
+
+N/A - tratativa de alinhamento de regra de negócio direta com o agente de CX.
+
+8. Comunicação
+
+@agente.cx03 A proposta de renegociação cadastrada no sistema esta correta (1.890,00). O valor de R$ 2.450,00 citado verbalmente não ode ser inserido manualmente. Reoriente o cliente com a condição oficial do sistema no valor de 1.890,00.
+
+9. Status final
+
+SOLUCIONADO
+
+
 
