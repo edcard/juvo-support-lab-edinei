@@ -24,7 +24,7 @@ Escalar para o time de Antifraude devido ao bloqueio ANTIFRAUD_HOLD.
 
 Foi identificado que o contrato está aprovado e a conta bancária validada. O desembolso encontra-se retido por uma validação de Antifraude (ANTIFRAUD_HOLD). O caso foi encaminhado para a equipe responsável para análise e liberação do pagamento.
 
-=========================================================================================================
+===============================================================================================
 
 # IT-2008 - Desembolso ao cliente
 
