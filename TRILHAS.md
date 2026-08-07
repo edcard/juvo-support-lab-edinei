@@ -157,32 +157,41 @@ SOLUCIONADO
 IT-2009 - Valor divergente de pagamento
 
 1. Onde consulto primeiro
+   
 Sistema interno → contrato 90009001 / CPF 902.999.999-09 → aba staus das parcelas, numero_ parcela , valor, status pagamento.
 
 2. O que busco
+   
 Status da Parcela, se continua em aberto ou não.
 
 3. O que encontrei
+   
 CSV: installment_ref=parcela_3, installment_status=aberta, installment_amount_brl=403,06, 
 status credito = quitado parcial, id pagamento =banco_pay_r2_i01, status pagamento =pago
 
 4. Hipótese
+   
 Cliente efetuou o pagamento com um valor maior do que o devido na parcela, não vinculando 
 o pagamento da parcela 3.
 
 5. Retry/reprocesso
+   
 Executar rotina/job para dar baixa na parcela 3.
 
 6. Correção manual
+   
 Solicitar ao time Financeiro/Tesouraria a devolução do valor pago a maior.
  
 7. Escalação
+   
 Escalar para o time Financeiro/Tesouraria paraa devolução do valor excedente (R$ 46,94).
 
 8. Comunicação
+   
 @agente.cx08 Baixa da parcela 3 realizada com sucesso. Como houve pagamento com um valor maior do que o devido, foi encaminhado ao financeiro para devolução do excedente para o cliente.
 
 9. Status final
+    
 SOLUCIONADO
 
 
