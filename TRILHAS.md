@@ -155,6 +155,7 @@ Financeiro para estorno na conta do cliente. A parcela consta como quitada e as 
 SOLUCIONADO
 
 ============================================================================================
+
 IT-2009 - Valor divergente de pagamento
 
 1. Onde consulto primeiro
