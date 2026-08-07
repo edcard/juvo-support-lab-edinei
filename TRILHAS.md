@@ -65,6 +65,32 @@ Encaminhar para a equipe de contratos/créditos verificar o que ocorreu.
 
 Foi identificado que o contrato e o crédito foram recusados, enviado para a equipe  responsável para análise e liberação ou não do PIX.
 
-
-
 ========================================================================================
+
+# IT-2011 - Desembolso ao cliente 902.888.888-08
+
+## Resumo
+
+Desembolso ao cliente
+
+## Análise
+
+Ao consultar o sistema interno pelo CPF e CCB, foi verificado que:
+
+- Contrato: assinado
+- CCB: 90008002
+- Crédito: Aprovado
+- Banco validado: Sim
+- Status do desembolso: aguardando desembolso
+
+## Causa
+ Falha na integração/envio de Pix nessa nova proposta.
+
+## Ação
+
+Executar rotina de reprocessamento (Pagamento/Pix) para esse CCB 90008002
+
+## Resposta ao CX
+
+Não se trata do mesmo problema da CCB anterior. A CCB 90008001 (ticket IT-2008) foi recusada, porém a CCB 90008002 foi aprovado e estava pendente apenas do reprocessamento do Pix. 
+Feito o reprocessamento do Pix, pedir para cliente validar o recebimento.
