@@ -30,10 +30,6 @@ Foi identificado que o contrato está aprovado e a conta bancária validada. O d
 
 ## Resumo
 
-# IT-2008 - Desembolso ao cliente
-
-## Resumo
-
 Cliente informa que assinou o contrato no dia anterior e ainda não recebeu o PIX.
 
 ## Análise
