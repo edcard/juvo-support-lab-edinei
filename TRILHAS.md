@@ -276,4 +276,44 @@ N/A
 
 SOLUCIONADO
 
+==================================================================================
+
+IT-2004 - Erro ao gerar parcela(s) cobrança (sistema interno) - 902.444.444-04
+
+1. Onde consulto primeiro
+
+Sistema interno → contrato 90004001 / CPF 902.444.444-04 → aba documentos/cobranças e parcelas.
+
+2. O que busco
+
+Parcela 4 aberta? Documento ativo? Status do boleto (válido vs vencido)?
+
+3. O que encontrei
+
+CSV: installment_ref=parcela_4, installment_status=aberta, installment_amount_brl=412.50, last_doc_generated=doc_r2_0401, last_doc_type=boleto_parcela, last_doc_status=vencida.
+
+4. Hipótese
+
+Boleto da parcela 4 está vencido; cliente precisa de documento válido com novo vencimento.
+
+5. Retry/reprocesso
+
+N/A - não é falha de job; é documento vencido.
+
+6. Correção manual
+
+Cancelar/inativar doc_r2_0401 e gerar novo boleto da parcela 4 com vencimento atual (R$ 412,50).
+
+7. Escalação
+
+N/A - regenerar boleto é ação operacional do suporte.
+
+8. Comunicação
+
+@agente.cx04 Boleto vencido cancelado. Gere / enviei boleto válido da parcela 4 (R$ 412,50). Anexaria print do documento novo.
+
+9. Status final
+
+SOLUCIONADO
+
 
