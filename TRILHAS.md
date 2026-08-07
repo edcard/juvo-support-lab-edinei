@@ -117,32 +117,41 @@ SOLUCIONADO
 
 IT-2003 - Pagamento do cliente - 902.333.333-03
 1. Onde consulto primeiro
+   
 Sistema interno → contrato 90003001 / CPF 902.333.333-03 → aba staus das parcelas, numero_ parcela , valor, status pagamento.
 
 2. O que busco
+   
 Status da Parcela, se continua em aberto ou não.
 
 3. O que encontrei
+   
 CSV: installment_ref=parcela_5, installment_status=aberta, installment_amount_brl=380,00, 
 status credito = quitado parcial, id pagamento =banco_pay_r2_d01;banco_pay_r2_d02, status pagamento =pago
 
 4. Hipótese
+   
 Serviço ou job de liquidação não vinculou o pagamento à parcela 5. Além disso, houve pagamento em duplicidade pelo cliente para o mesmo vencimento.
 
 5. Retry/reprocesso
+    
 Executar rotina/job de conciliação manual do Pix para dar baixa na parcela 5.
 
 6. Correção manual
+    
 Solicitar ao time Financeiro/Tesouraria o estorno (devolução) do segundo Pix de R$ 380,00 para a conta de origem do cliente por ter sido pago em duplicidade.
 
 7. Escalação
+    
 Escalar para o time Financeiro/Tesouraria com os dois comprovantes para operacionalizar a devolução do valor excedente (R$ 380,00).
 
 8. Comunicação
+    
 @agente.cx03 Baixa da parcela 5 realizada com sucesso a partir do primeiro Pix. Como houve pagamento em duplicidade, o segundo valor de R$ 380,00 foi encaminhado ao 
 Financeiro para estorno na conta do cliente. A parcela consta como quitada e as cobranças foram suspensas.
 
 9. Status final
+    
 SOLUCIONADO
 =========================================================================================
 IT-2009 - Valor divergente de pagamento
