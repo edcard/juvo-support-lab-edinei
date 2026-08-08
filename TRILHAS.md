@@ -52,7 +52,7 @@ CSV: contrato_status=recusado, credito_status=recusado, banco_validado=sim, dese
 
 4. Hipótese
 
-Solicitação de reprocessamento é indevida; a proposta foi recusada (RECUSA_CREDITO) e o desembolso foi cancelado.
+Solicitação de reprocessamento é indevida e a proposta foi recusada (RECUSA_CREDITO) e o desembolso foi cancelado.
 
 5. Retry/reprocesso
 
