@@ -93,4 +93,4 @@ Ordem de Triagem, escalar ou não, correção manual ou não.
 
 Utilizei a IA para entendimento do funcionamento do GITHUB, ferramenta que não possuo muita familiaridade. 
 No documento TRILHAS.md a sequência de respostas está de acordo com o que foi definido no arquivo de TRIAGEM.md, do que que entendi
-ser o mais crítico ao menos crítico.
+ser o mais crítico.
