@@ -61,15 +61,15 @@ Como a resposta **mudaria sua trilha** (passos 5-7 em [MODELO-TRILHA](./MODELO-T
 
 **a) Contexto:**
 
-> _(escreva aqui)_
+No IT-2005, há uma diferença de valores na renegociação (valor considerável). Verbalmente foi passado um valor e no sistema está outro.
 
 **b) Sua pergunta ao time:**
 
-> _(escreva aqui)_
+Se há uma política de aplicação de desconto ao fazer uma renegociação através do Juvo Negocia, se sim qual seria o desconto aplicado (%).
 
 **c) Por que isso importa / o que mudaria na trilha:**
 
-> _(escreva aqui)_
+Se não tem essa política, o valor apresentado no sistema está indevido e é preciso ajusta-lo de acordo com o valor que o CX combinou com o cliente de maneira verbal.
 
 ---
 
