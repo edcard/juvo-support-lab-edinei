@@ -90,7 +90,6 @@ Revisão de texto, sobre o que é KYC Doc Expired, hipótese ITs 2003 e 2010, an
 | O que **não** delegou à IA? | _(ex.: ordem da triagem, hipótese do IT-2003, decisão de escalar IT-2001…)_ |
 Ordem de Triagem, escalar ou não, correção manual ou não.
 **Comentário opcional** (1-3 linhas):
-
 Utilizei a IA para entendimento do funcionamento do GITHUB, ferramenta que não possuo muita familiaridade. 
 No documento TRILHAS.md a sequência de respostas está de acordo com o que foi definido no arquivo de TRIAGEM.md, do que que entendi
-ser o mais crítico.
+ser o mais crítico ao menos crítico.
