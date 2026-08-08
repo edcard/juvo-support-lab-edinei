@@ -1,4 +1,4 @@
-Ticket IT-2001 (Desembolso ao cliente - Antifraude)
+Ticket IT-2001 Desembolso (antifraude)
 1. Onde consulto primeiro
 
 Sistema interno → contrato 90001001 / CPF → aba pagamentos e segurança.
@@ -37,14 +37,14 @@ EM ANDAMENTO / ESCALADO
 
 ============================================================================================
 
-Ticket IT-2008 (Desembolso ao cliente - CCB 90008001)
+Ticket IT-2008 Desembolso (CCB recusada)
 1. Onde consulto primeiro
 
 Sistema interno → contrato 90008001 / CPF 902.888.888-08 → aba proposta/crédito.
 
 2. O que busco
 
-Status da CCB 90008001, Status do crédito?, e se Eexiste valor aprovado pendente de envio.
+Status da CCB 90008001, Status do crédito, e se existe valor aprovado pendente de envio.
 
 3. O que encontrei
 
@@ -64,7 +64,7 @@ N/A - não há valor a ser liberado.
 
 7. Escalação
 
-N/A - caso resolvido via consulta de dados; alinhar motivo com equipe de Crédito/Contratos se necessário.
+N/A - caso resolvido via consulta de dados, alinhar motivo com equipe de Crédito/Contratos se necessário.
 
 8. Comunicação
 
@@ -72,11 +72,11 @@ N/A - caso resolvido via consulta de dados; alinhar motivo com equipe de Crédit
 
 9. Status final
     
-Cancelado/resolvido
+CANCELADO/RESOLVIDO
 
 ========================================================================================
 
-Ticket IT-2011 (Desembolso ao cliente - CCB 90008002)
+Ticket IT-2011 Desembolso (2ª CCB)
 1. Onde consulto primeiro
 
 Sistema interno → contrato 90008002 / CPF 902.888.888-08 → aba pagamentos e integração Pix.
@@ -115,7 +115,7 @@ SOLUCIONADO
 
 ========================================================================================
 
-IT-2003 - Pagamento do cliente - 902.333.333-03
+IT-2003 - Pagamento (PIX duplicado)
 1. Onde consulto primeiro
    
 Sistema interno → contrato 90003001 / CPF 902.333.333-03 → aba staus das parcelas, numero_ parcela , valor, status pagamento.
@@ -156,7 +156,7 @@ SOLUCIONADO
 
 ============================================================================================
 
-IT-2009 - Valor divergente de pagamento
+IT-2009 - Pagamento (valor divergente)
 
 1. Onde consulto primeiro
    
@@ -198,11 +198,11 @@ SOLUCIONADO
 
 ==========================================================================================
 
-IT-2010	Cliente alega quitação
+IT-2010	- Pagamento (alega quitação)
 
 1. Onde consulto primeiro
 
-Sistema interno → contrato 90010001/CPF 902.101.010-10 -aba staus das parcelas, numero_ parcela , valor, status pagamento.
+Sistema interno → contrato 90010001/CPF 902.101.010-10 -aba status das parcelas, numero_ parcela , valor, status pagamento.
 
 2. O que busco
 
@@ -238,7 +238,7 @@ AGUARDANDO INFORMAÇÃO
 
 ============================================================================================
 
-IT-2002 - Onboarding site - 902.222.222-02
+IT-2002 - Onboarding KYC
 
 1. Onde consulto primeiro
 
@@ -278,7 +278,7 @@ SOLUCIONADO
 
 ==================================================================================
 
-IT-2004 - Erro ao gerar parcela(s) cobrança (sistema interno) - 902.444.444-04
+IT-2004 - Boleto Vencido
 
 1. Onde consulto primeiro
 
@@ -286,7 +286,7 @@ Sistema interno → contrato 90004001 / CPF 902.444.444-04 → aba documentos/co
 
 2. O que busco
 
-Parcela 4 aberta? Documento ativo? Status do boleto (válido vs vencido)?
+Parcela 4 aberta? Documento ativo, status do boleto 
 
 3. O que encontrei
 
@@ -294,11 +294,11 @@ CSV: installment_ref=parcela_4, installment_status=aberta, installment_amount_br
 
 4. Hipótese
 
-Boleto da parcela 4 está vencido; cliente precisa de documento válido com novo vencimento.
+Boleto da parcela 4 está vencido, cliente precisa de documento válido com novo vencimento.
 
 5. Retry/reprocesso
 
-N/A - não é falha de job; é documento vencido.
+N/A - não é falha de job/serviço, é documento vencido.
 
 6. Correção manual
 
@@ -318,7 +318,7 @@ SOLUCIONADO
 
 ============================================================
 
-IT-2005	- Erro ao gerar negociação (Juvo Negocia)
+IT-2005	- Renegociação (valor)
 
 1. Onde consulto primeiro
 
@@ -359,7 +359,7 @@ SOLUCIONADO
 
 ============================================
 
-IT-2007	- Termo de quitação - 902.777.777-07
+IT-2007	- Termo de quitação 
 
 1. Onde consulto primeiro
 
@@ -399,7 +399,7 @@ AGUARDANDO INFORMAÇÃO / EM ANDAMENTO
 
 ===========================================================
 
-IT-2006	Parar SMS / comunicação - 902.666.666-06
+IT-2006	- Parar SMS 
 
 1. Onde consulto primeiro
 
@@ -427,7 +427,7 @@ Ajustar as preferências de comunicação, desmarcando o envio de SMS.
  
 7. Escalação
 
-N/A - O ajuste de preferência de comunicação é uma ação direta d suporte.
+N/A - O ajuste de preferência de comunicação é uma ação direta do suporte.
 
 8. Comunicação
 
@@ -439,7 +439,7 @@ SOLUCIONADO
 
 =====================================
 
-IT-2012	Apenas dúvida de prazo de desembolso - 902.121.212-12
+IT-2012	- Dúvida de Prazo
 
 1. Onde consulto primeiro
 
