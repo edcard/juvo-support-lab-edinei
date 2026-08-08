@@ -82,8 +82,11 @@ Preencha com honestidade - usar IA para organizar texto ou revisar redação **n
 | Campo | Resposta |
 |-------|----------|
 | Usou IA neste teste? | Sim / Não |
+SIM
 | Ferramenta(s) | _(ex.: ChatGPT, Claude, Copilot, Cursor…)_ |
+GEMINI
 | Para quê? | _(ex.: revisar texto da trilha, resumir CSV, checar nomenclatura…)_ |
+Revisão de texto, 
 | O que **não** delegou à IA? | _(ex.: ordem da triagem, hipótese do IT-2003, decisão de escalar IT-2001…)_ |
 
 **Comentário opcional** (1-3 linhas):
