@@ -29,7 +29,7 @@ Escalar ticket para o time de Antifraude/Risco solicitando a análise e liberaç
 
 8. Comunicação
 
-@agente.cx Contrato aprovado e banco validado. O desembolso está retido por uma trava preventiva de Antifraude (ANTIFRAUD_HOLD). Encaminhado ao time responsável para análise e liberação.
+@agente.cx01 Contrato aprovado e banco validado. O desembolso está retido por uma trava preventiva de Antifraude (ANTIFRAUD_HOLD). Encaminhado ao time responsável para análise e liberação.
 
 9. Status final
 
